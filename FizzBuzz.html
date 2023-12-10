@@ -9,9 +9,28 @@
 <body>
     <script>
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+function fizzBuzz() {
+    let num = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: ", 16)); 
+    let result = "";
 
-for (let i = 1; i <= answer; i++) {
+    for (let i = 1; i <= num; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            result += "FizzBuzz\n";
+        } else if (i % 3 === 0) {
+            result += "Fizz\n";
+        } else if (i % 5 === 0) {
+            result += "Buzz\n";    
+        } else {
+            result += i + "\n";
+        }
+    }
+
+    return result.trim();
+};
+
+let num = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+
+for (let i = 1; i <= num; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
     console.log("FizzBuzz");
   } else if (i % 3 === 0) {
@@ -22,7 +41,6 @@ for (let i = 1; i <= answer; i++) {
     console.log(i);
   }
 }
-
     </script>
 </body>
 </html>
