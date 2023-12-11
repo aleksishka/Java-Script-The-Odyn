@@ -7,39 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-
-        /* 
-        
-        function getComputerChoice() {
-            let computerSelection = Math.floor(Math.random() * 3)
-            switch (computerSelection) {
-                case 0:
-                    return 'Rock'
-                case 1:
-                    return 'Paper'
-                case 2:
-                    return 'Scissors'
-            }
-        }
-        */
-
-        function getComputerChoice() {
-            const choice = ['Rock', 'Paper', 'Scissors'];
-            const randomIndex = Math.floor(Math.random() * choice.length);
-            return choice[randomIndex];
-};
-
-
-        
+    <script>        
         let playerSelection = prompt('Do you choose "Rock", "Scissors" or "Paper"?');
-        console.log(playerSelection);
-        let computerSelection = getComputerChoice();
-        console.log(computerSelection);
         let playerLowerCase = playerSelection.toLowerCase();
         
 
-        function playRound(playerSelection, computerSelection) {
+        function playRound(playerSelection) {
+            let computerSelection = getComputerChoice();
             let result = "";    
 
             if (
@@ -65,6 +39,12 @@
             }
 
             return result;
+        };
+
+        function getComputerChoice() {
+            const choice = ['Rock', 'Paper', 'Scissors'];
+            const randomIndex = Math.floor(Math.random() * choice.length);
+            return choice[randomIndex];
         };
     </script>
 
